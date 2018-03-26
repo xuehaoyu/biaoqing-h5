@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.index-body{
+    width: 100%;
+    height: auto;
+}
+.index-top{
+    width: 100%;
+    height: 2.46rem;
+    background: url("../imgs/head.png") no-repeat center/cover;
+    box-sizing: border-box;
+    padding: 1.36rem  0.55rem 0;
+}
+.search-input{
+    width: 6.4rem;
+    height: 0.84rem;
+    background: #ffffff;
+    border-radius: 0.08rem;
+    box-shadow: 0 0.02rem 0.06rem 0.02rem rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+.search-input input{
+    width: 6.4rem;
+    height: 0.84rem;
+    background: #ffffff;
+    border-radius: 0.08rem;
+    border: none;
+    display: block;
+    box-sizing: border-box;
+    padding: 0 1.3rem 0 0.22rem;
+    font-size: 0.28rem;
+    color: #979797;
+    outline: none;
+}
+.search-btn{
+    width: 0.98rem;
+    height: 0.62rem;
+    background: #fc596c;
+    border-radius: 0.08rem;
+    font-size: 0.28rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    line-height: 0.62rem;
+    position: absolute;
+    right: 0.16rem;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.change-search{
+    width: 6.4rem;
+    height: 0.84rem;
+    justify-content: space-between;
+    display: none;
+}
+.search-two{
+    width: 5.45rem;
+    height: 0.84rem;
+    background: #fff;
+    border-radius: 0.08rem;
+    box-shadow: 0 0.02rem 0.06rem 0.02rem rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+.search-two input{
+    display: block;
+    width: 5.45rem;
+    height: 0.84rem;
+    background: #fff;
+    border-radius: 0.08rem;
+    border: none;
+    box-sizing: border-box;
+    padding: 0 1.3rem 0 0.22rem;
+    font-size: 0.28rem;
+    color: #979797;
+    outline: none;
+}
+.has-search{
+    width: 0.98rem;
+    height: 0.62rem;
+    background: #fc596c;
+    border-radius: 0.08rem;
+    font-size: 0.28rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    line-height: 0.62rem;
+    position: absolute;
+    right: 0.16rem;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.back-btn{
+    width: 0.64rem;
+    height: 0.64rem;
+    background: url("../imgs/back.png") no-repeat center/cover;
+    margin-top: 0.1rem;
+}
+/*热词区域*/
+.hot-body{
+    width: 6.4rem;
+    height: 3.58rem;
+    background: #f9f6f2;
+    border-radius: 0.1rem;
+    margin: 0 auto 0.28rem;
+    box-shadow: 0 0.04rem 0.08rem 0.04rem #f9f6f2;
+}
+.hot-top{
+    width: 100%;
+    height: 0.66rem;
+    background: #ffffff;
+    box-sizing: border-box;
+    padding: 0.12rem 0.24rem 0;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.08rem 0.08rem 0 0;
+    margin-bottom: 0.04rem;
+}
+.hottop-left{
+    font-size: 0.26rem;
+    line-height: 0.26rem;
+    color: #979797;
+    padding-top: 0.08rem;
+}
+.hottop-right{
+    width: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+.change-img{
+    width: 0.39rem;
+    height: 0.39rem;
+}
+.change-font{
+    font-size: 0.26rem;
+    line-height: 0.39rem;
+    color: #fc596c;
+}
+.hot-area{
+    width: 100%;
+    height: 2.88rem;
+    background: #ffffff;
+    border-radius: 0 0 0.08rem 0.08rem ;
+    box-sizing: border-box;
+    padding: 0.4rem 0.32rem 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.word-item{
+    width: 1.62rem;
+    height: 0.30rem;
+    font-size: 0.28rem;
+    font-weight: 700;
+    line-height: 0.3rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.normal-word{
+    max-width: 1.62rem;
+    color: #717070;
+    overflow: hidden;
+}
+.hot-word{
+    max-width: 1.06rem;
+    color: #fc596c;
+    overflow: hidden;
+}
+.word-item img{
+    width: 0.48rem;
+    height: 0.3rem;
+}
+/*热门表情*/
+.hot-face{
+    width: 7rem;
+    height: auto;
+    margin: 0 auto;
+}
+.face-title{
+    width: 6.84rem;
+    height: 0.46rem;
+    padding-bottom: 0.11rem;
+    padding-left: 0.16rem;
+    box-shadow: 0 0.05rem 0.04rem 0.01rem #f9f6f2;
+    display: flex;
+}
+.face-title img{
+    display: block;
+    width: 0.38rem;
+    height: 0.46rem;
+}
+.face-title span{
+    display: block;
+    font-size: 0.28rem;
+    line-height: 0.28rem;
+    color: #fc596c;
+    padding: 0.16rem 0 0 0.08rem;
+}
+.face-area{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.26rem 0 1.2rem;
+    flex-wrap: wrap;
+}
+.face-item{
+    width: 2.2rem;
+    height: 2.2rem;
+    overflow: hidden;
+    margin-bottom: 0.26rem;
+}
+.face-item img{
+    width: 2.2rem;
+}
+/*搜索到的表情包*/
+.emoji-body{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0.32rem 0.24rem;
+    display: none;
+}
+.emoji-title{
+    width: 100%;
+    font-size: 0.3rem;
+    font-weight: 700;
+    color: #fc6073;
+    padding: 0 0 0.35rem 0.08rem;
+}
+.emoji-area{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.emoji-item{
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-bottom: 0.26rem;
+    overflow: hidden;
+}
+.emoji-item img{
+    width: 2.2rem;
+}
+/*教程页面*/
+.teach-body{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 9;
+    box-sizing: border-box;
+    padding: 1.38rem 0 0 0;
+    display: none;
+}
+.teach-body img{
+    width: 100%;
+}
+.teach-top{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    padding-top: 6.88rem;
+}
+.teach-top img{
+    display: block;
+    width: 2rem;
+    height: 2.38rem;
+    margin: 0 auto;
+}
+.teac-font{
+    width: 100%;
+    height: auto;
+    font-size: 0.24rem;
+    line-height: 0.24rem;
+    color: #ffffff;
+    text-align: center;
+    padding:  0.26rem 0 0.32rem 0;
+}
+.has-know{
+    width: 3rem;
+    height: 0.62rem;
+    background: #fc596c;
+    border-radius: 0.08rem;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 0.62rem;
+    font-size: 0.32rem;
+    font-weight: 700;
+    color: #ffffff;
+}
