@@ -204,16 +204,19 @@
 }
 .face-area{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     padding: 0.26rem 0 1.2rem;
-    flex-wrap: wrap;
+    overflow: hidden;
 }
 .face-item{
     width: 2.2rem;
     height: 2.2rem;
     overflow: hidden;
+    float: left;
     margin-bottom: 0.26rem;
+    margin-right: 0.2rem;
+}
+.face-item:nth-child(3n){
+    margin-right: 0;
 }
 .face-item img{
     width: 2.2rem;
@@ -236,15 +239,21 @@
 .emoji-area{
     width: 100%;
     height: auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*flex-wrap: wrap;*/
+    overflow: hidden;
 }
 .emoji-item{
     width: 2.2rem;
     height: 2.2rem;
     margin-bottom: 0.26rem;
+    margin-right: 0.21rem;
+    float: left;
     overflow: hidden;
+}
+.emoji-item:nth-child(3n){
+    margin-right: 0;
 }
 .emoji-item img{
     width: 2.2rem;
