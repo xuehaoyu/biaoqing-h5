@@ -167,15 +167,20 @@ $(function () {
         teachImg = $(e.target)[0].currentSrc
         let teachFlag = window.sessionStorage.getItem("teach");
         if(teachFlag){
-            console.log(teachFlag)
+            // console.log(teachFlag)
             wx.previewImage({
                 current: teachImg, // 当前显示图片的http链接
-                urls: [teachImg] // 需要预览的图片http链接列表
+                urls: [teachImg],// 需要预览的图片http链接列表
+                success:res=>{
+                    console.log(res);
+                },
+                fail:res=>{
+                    console.log(res);
+                }
             })
             let page = searchFonts;
             let action = hex_md5(teachImg);
             let actionName = teachImg;
-            console.log(actionName)
             $.ajax({
                 type: "GET",
                 url: url.common.submitAdvid,
@@ -202,10 +207,35 @@ $(function () {
         teachImg = $(e.target)[0].currentSrc
         let teachFlag = window.sessionStorage.getItem("teach");
         if(teachFlag){
-            console.log(teachFlag)
+            // console.log(teachFlag)
             wx.previewImage({
                 current: teachImg, // 当前显示图片的http链接
-                urls: [teachImg] // 需要预览的图片http链接列表
+                urls: [teachImg] ,// 需要预览的图片http链接列表
+                success:res=>{
+                    console.log(res);
+                },
+                fail:res=>{
+                    console.log(res);
+                }
+            })
+            let page = searchFonts;
+            let action = hex_md5(teachImg);
+            let actionName = teachImg;
+            $.ajax({
+                type: "GET",
+                url: url.common.submitAdvid,
+                dataType: "jsonp",
+                data:{
+                    page: page,
+                    action: action,
+                    actionName: actionName,
+                },
+                headers: {
+                    'cookie':`AppKey=${config.appid}`,
+                },
+                success:(res)=>{
+                    console.log(res);
+                }
             })
         }else {
             window.sessionStorage.setItem("teach","teach");
@@ -254,7 +284,13 @@ $(function () {
          $(".teach-body").css({"display":"none"});
          wx.previewImage({
              current: teachImg, // 当前显示图片的http链接
-             urls: [teachImg] // 需要预览的图片http链接列表
+             urls: [teachImg],// 需要预览的图片http链接列表
+             success:res=>{
+                console.log(res);
+             },
+             fail:res=>{
+                 console.log(res);
+             }
          })
          let page = searchFonts;
          let action = hex_md5(teachImg);
