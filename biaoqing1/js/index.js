@@ -126,7 +126,7 @@ $(function () {
     //页面dom事件处理
     //点击搜索
     $(".search-btn").on("click",(e)=>{
-        // console.log($(":input")[0].value);
+        console.log($(":input")[0].value);
         searchFonts = $(":input")[0].value;
         if(searchFonts != ""){
             $(".search-input").css({"display":"none"});
@@ -134,8 +134,8 @@ $(function () {
             $(".hot-body").css({"display":"none"});
             $(".hot-face").css({"display":"none"});
             $(".emoji-body").css({"display":"block"});
-            $(":input")[0].value = searFonts;
-            $(":input")[1].value = searFonts;
+            $(":input")[0].value = searchFonts;
+            $(":input")[1].value = searchFonts;
             $(".emoji-area").empty();
             start = 0;
             getImgs(searchFonts);
