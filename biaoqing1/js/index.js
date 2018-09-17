@@ -26,39 +26,71 @@ $(function () {
     }(url);
     //获取数据
     function getHotwords(url) {
-        $.ajax({
-            type: "GET",
-            url: url.yewu.hotwords,
-            dataType: "jsonp",
-            success:(res)=>{
-                console.log(res);
-                hotWords = res.d.Results;
-                let  hotSearch = getRand(hotWords);
-                hotSearch.forEach((item)=>{
-                    if(item.IsHot == "0"){
-                        $(`<div class="word-item"><div class="normal-word">${item.Name}</div></div>`).appendTo($(".hot-area"));
-                    }else {
-                        $(`<div class="word-item"><div class="hot-word">${item.Name}</div><img src="./imgs/fonthot.png" alt=""></div>`).appendTo($(".hot-area"));
-                    }
-                })
+        let hotSearch = [
+            {Name:"发际线男孩",IsHot:"1"},
+            {Name:"诺基亚聊天",IsHot:"0"},
+            {Name:"七夕情人节",IsHot:"1"},
+            {Name:"延禧攻略",IsHot:"1"},
+            {Name:"发际线男孩",IsHot:"0"},
+            {Name:"灰色小企鹅",IsHot:"0"},
+            {Name:"敷面膜",IsHot:"0"},
+            {Name:"竹鼠",IsHot:"0"},
+            {Name:"手机拿倒了",IsHot:"0"},
+        ];
+        hotSearch.forEach((item)=>{
+            if(item.IsHot == "0"){
+                $(`<div class="word-item"><div class="normal-word">${item.Name}</div></div>`).appendTo($(".hot-area"));
+            }else {
+                $(`<div class="word-item"><div class="hot-word">${item.Name}</div><img src="./imgs/fonthot.png" alt=""></div>`).appendTo($(".hot-area"));
             }
         })
+        // $.ajax({
+        //     type: "GET",
+        //     url: url.yewu.hotwords,
+        //     dataType: "jsonp",
+        //     success:(res)=>{
+        //         console.log(res);
+        //         hotWords = res.d.Results;
+        //         let  hotSearch = getRand(hotWords);
+        //         hotSearch.forEach((item)=>{
+        //             if(item.IsHot == "0"){
+        //                 $(`<div class="word-item"><div class="normal-word">${item.Name}</div></div>`).appendTo($(".hot-area"));
+        //             }else {
+        //                 $(`<div class="word-item"><div class="hot-word">${item.Name}</div><img src="./imgs/fonthot.png" alt=""></div>`).appendTo($(".hot-area"));
+        //             }
+        //         })
+        //     }
+        // })
     }
     function getHotimg(url) {
-        $.ajax({
-            type: "GET",
-            url: url.yewu.hotimg,
-            dataType: "jsonp",
-            data: {
-                appKey: config.appid,
-            },
-            success:(res)=>{
-                let hotimgs = res.d;
-                hotimgs.forEach((item)=>{
-                    $(`<div class="face-item"><img src="${item.actionname}" alt=""></div>`).appendTo($(".face-area"));
-                })
-            }
+        let hotimgs = [
+            {actionname:"https://xcx-album-img.zmwxxcx.com/9a7f4023e3314204f114ec9471238792-thumbnail"},
+            {actionname:"https://xcx-album-img.zmwxxcx.com/a87652d8bb9db61f84acb5d637ad6869-thumbnail"},
+            {actionname:"https://xcx-album-img.zmwxxcx.com/0a81570f75236a9403111fe60a85e584-thumbnail"},
+            {actionname:"https://xcx-album-img.zmwxxcx.com/3162f813b2de40c2af85e62f44978ca5-thumbnail"},
+            {actionname:"https://xcx-album-img.zmwxxcx.com/c20bf0bc91731ad749db02eb047f255d-thumbnail"},
+            {actionname:"https://xcx-album-img.zmwxxcx.com/1ffd92b023c7453142a0956b115679d7-thumbnail"},
+            {actionname:"https://xcx-album-img.zmwxxcx.com/3162f813b2de40c2af85e62f44978ca5-thumbnail"},
+            {actionname:"https://xcx-album-img.zmwxxcx.com/bd2e58f4bd002adb9c5c9bfa87b18e59-thumbnail"},
+            {actionname:"https://xcx-album-img.zmwxxcx.com/c1566e2eb3b593575c85b9f367fae147-thumbnail"},
+        ];
+        hotimgs.forEach((item)=>{
+            $(`<div class="face-item"><img src="${item.actionname}" alt=""></div>`).appendTo($(".face-area"));
         })
+        // $.ajax({
+        //     type: "GET",
+        //     url: url.yewu.hotimg,
+        //     dataType: "jsonp",
+        //     data: {
+        //         appKey: config.appid,
+        //     },
+        //     success:(res)=>{
+        //         let hotimgs = res.d;
+        //         hotimgs.forEach((item)=>{
+        //             $(`<div class="face-item"><img src="${item.actionname}" alt=""></div>`).appendTo($(".face-area"));
+        //         })
+        //     }
+        // })
     }
     //数据处理方法
     // 获取八个随机热词 加入跳转词语
